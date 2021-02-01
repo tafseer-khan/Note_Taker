@@ -5,15 +5,8 @@ module.exports = (app) => {
     fs.readFile("db/db.json", (err, data) => {
         if (err)
             throw error;
-        let notes = JSON.parse(data);
-
-        app.get('/notes', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/notes.html'));
-        });
-        app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, '../public/index.html'));
-        });
-
+        var notes = JSON.parse(data);        
+        
         app.get("/api/notes", (req, res) => {
             res.json(notes);
         });
@@ -34,6 +27,15 @@ module.exports = (app) => {
             updateDB()
             console.log("Deleted notes")
         });
+
+        app.get('/notes', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/notes.html'));
+        });
+        app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, '../public/index.html'));
+        });
+
+
 
         updateDB = () => {
             fs.writeFile("db/db.json", JSON.stringify(notes), err => {
