@@ -15,16 +15,19 @@ module.exports = (app) => {
             let newNote = req.body;
             notes.push(newNote);
             updateDB();
+            res.send(req.body)
             console.log("Added new notes")
         });
 
         app.get("/api/notes/:id", (req, res) => {
             res.json(notes[req.params.id]);
+            res.send(req,body)
         });
 
         app.delete("/api/notes/:id", (req, res) => {
             notes.splice(req.params.id, 1);
             updateDB()
+            res.send(req.body)
             console.log("Deleted notes")
         });
 
