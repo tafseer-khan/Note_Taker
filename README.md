@@ -29,7 +29,7 @@ Please contact me personally for any contribution.
 Please set up test scripts, and use jest.
 
 ## Liscense
-undefined
+MIT
 
 ## Contact
 Please contact me through GitHub or Email!
