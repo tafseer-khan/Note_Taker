@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const uniqid = require('uniqid')
 
 module.exports = (app) => {
     fs.readFile("db/db.json", (err, data) => {
@@ -14,6 +15,7 @@ module.exports = (app) => {
         app.post("/api/notes", (req, res) => {
             let newNote = req.body;
             notes.push(newNote);
+            newNote.id = uniqid()
             updateDB();
             res.send(req.body)
             console.log("Added new notes")
@@ -21,7 +23,6 @@ module.exports = (app) => {
 
         app.get("/api/notes/:id", (req, res) => {
             res.json(notes[req.params.id]);
-            res.send(req,body)
         });
 
         app.delete("/api/notes/:id", (req, res) => {
