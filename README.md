@@ -29,7 +29,7 @@ Please contact me personally for any contribution.
 Please set up test scripts, and use jest.
 
 ## Liscense
-MIT
+[MIT](https://github.com/tafseer-khan/Note_Taker/blob/main/LICENSE)
 
 ## Contact
 Please contact me through GitHub or Email!
