@@ -28,7 +28,7 @@ If you are viewing a note and would like to create a new note please click on th
 ## Screenshot
 ![projectScreenshot](https://github.com/tafseer-khan/Note_Taker/blob/main/Screenshots/Home%20Screenshot.png)
 ![projecttScreenshot2](https://github.com/tafseer-khan/Note_Taker/blob/main/Screenshots/Notes%20Screenshot.png)
-
+![projectGif](https://github.com/tafseer-khan/Note_Taker/blob/main/Screenshots/Website.gif)
 ## Contribution
 Please contact me personally for any contribution.
 
